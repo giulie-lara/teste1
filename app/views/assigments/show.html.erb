@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zombie:</strong>
+  <%= @assigment.zombie_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @assigment.role_id %>
+</p>
+
+<%= link_to 'Edit', edit_assigment_path(@assigment) %> |
+<%= link_to 'Back', assigments_path %>

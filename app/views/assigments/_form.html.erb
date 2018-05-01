@@ -1,0 +1,25 @@
+<%= form_for(@assigment) do |f| %>
+  <% if @assigment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assigment.errors.count, "error") %> prohibited this assigment from being saved:</h2>
+
+      <ul>
+      <% @assigment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zombie_id %><br>
+    <%= f.number_field :zombie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :role_id %><br>
+    <%= f.number_field :role_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
